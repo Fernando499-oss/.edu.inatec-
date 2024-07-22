@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenguas de Señas en Nicaragua</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        :root {
+            --color-primario: #3498db;
+            --color-secundario: #2ecc71;
+            --color-fondo: #f0f0f0;
+            --color-texto: #333;
+            --color-sombra: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .neumorfico {
+            background: var(--color-fondo);
+            box-shadow: 8px 8px 16px var(--color-sombra),
+                        -8px -8px 16px rgba(255, 255, 255, 0.7);
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .modo-oscuro {
+            --color-fondo: #2c3e50;
+            --color-texto: #ecf0f1;
+            --color-sombra: rgba(0, 0, 0, 0.3);
+        }
+
+        #particulas-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .imagen-seccion {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .interruptor-modo-oscuro {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <div id="particulas-js"></div>
+    <button id="interruptorModoOscuro" class="interruptor-modo-oscuro neumorfico p-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+    </button>
+    <header class="neumorfico mb-8">
+        <div class="flex items-center justify-center mb-6">
+            <img src="https://image.pollinations.ai/prompt/Minimalist%20logo%20of%20hands%20forming%20LSN%20letters%20modern%20elegant%20vector%20style%20teal%20and%20white?width=200&height=200" alt="Logo LSN" class="logo">
+            <h1 class="text-4xl font-bold text-center">Lenguas de Señas en Nicaragua</h1>
+        </div>
+        <nav>
+            <ul class="flex justify-center space-x-6">
+                <li><a href="#historia" class="text-color-primario hover:text-color-secundario transition-colors">Historia del ISN</a></li>
+                <li><a href="#reconocimiento" class="text-color-primario hover:text-color-secundario transition-colors">Reconocimiento Oficial</a></li>
+                <li><a href="#interaccion" class="text-color-primario hover:text-color-secundario transition-colors">Interacción con Otras Lenguas</a></li>
+                <li><a href="#situacion" class="text-color-primario hover:text-color-secundario transition-colors">Situación Actual</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="flex-grow container mx-auto px-4">
+        <section id="historia" class="neumorfico">
+            <h2 class="text-3xl font-semibold mb-4">Historia del ISN</h2>
+            <img src="https://image.pollinations.ai/prompt/Nicaraguan%20Sign%20Language%20classroom%20with%20deaf%20children%20learning,%20colorful%20and%20vibrant,%20photorealistic?width=1000&height=500" alt="Niños aprendiendo lenguaje de señas nicaragüense" class="imagen-seccion">
+            <p class="mb-4">El Idioma de Señas Nicaragüense (ISN) se desarrolló en la década de 1980 en la primera escuela pública para niños sordos en Nicaragua. Este lenguaje emergió de la interacción entre estudiantes y maestros, evolucionando de manera natural.</p>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/pjtioIFuNf8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section id="reconocimiento" class="neumorfico">
+            <h2 class="text-3xl font-semibold mb-4">Reconocimiento Oficial</h2>
+            <img src="https://image.pollinations.ai/prompt/Official%20document%20recognizing%20Nicaraguan%20Sign%20Language,%20government%20seal,%20photorealistic?width=1000&height=500" alt="Documento oficial de reconocimiento del ISN" class="imagen-seccion">
+            <p class="mb-4">En 2009, se aprobó la Ley N°675, que reconoce oficialmente al ISN, estableciendo un marco legal para su uso y promoción en el país.</p>
